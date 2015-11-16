@@ -1,0 +1,15 @@
+PODS:
+  - Mantle (1.5):
+    - Mantle/extobjc (= 1.5)
+  - Mantle/extobjc (1.5)
+  - Masonry (0.6.3)
+
+DEPENDENCIES:
+  - Mantle (= 1.5)
+  - Masonry
+
+SPEC CHECKSUMS:
+  Mantle: 3bf6db311c8b4a19b6be01f2483fa4590aa166f3
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+
+COCOAPODS: 0.38.2
