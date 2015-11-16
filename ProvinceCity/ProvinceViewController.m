@@ -7,13 +7,14 @@
 //
 
 #import "ProvinceViewController.h"
+#import "UIImage+RTTint.h"
+#import "HeaderView.h"
 #import "Province.h"
 #import "City.h"
-#import "HeaderView.h"
-#import "UIImage+RTTint.h"
 @interface ProvinceViewController ()
 {
     NSArray *datas;
+    UIAlertView *alertView;
 }
 @end
 static NSString *reuseIdentifier = @"Cell";
@@ -83,7 +84,9 @@ static NSString *reuseIdentifier = @"Cell";
 {
     Province *provice = datas[indexPath.section];
     City *city = provice.cities[indexPath.row];
-    NSLog(@"您选择：%@-%@",provice.ProvinceName,city.CityName);
+    NSString *string  = [NSString stringWithFormat:@"%@ - %@",provice.ProvinceName,city.CityName];
+    alertView = [[UIAlertView alloc] initWithTitle:@"系统提示" message:string delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 - (void)headerAction:(HeaderView *)headerView

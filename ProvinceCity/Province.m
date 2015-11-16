@@ -18,7 +18,7 @@
 
 + (NSDictionary *)managedObjectKeysByPropertyKey
 {
-    return @{};//@{@"ID":@"Id",@"ProvinceName":@"provinceName"};
+    return @{};//@{@"ID":@"Id",@"ProvinceName":@"provinceName",@"cities":@"cities",@"isOpen":@"isOpen"};
 }
 
 + (NSValueTransformer *)citiesJSONTransformer
